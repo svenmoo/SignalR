@@ -440,6 +440,10 @@
       </NuspecTransform>
     </ItemGroup>
 
+    <!--How doe this work??-->
+    <Exec Command="&quot;$(XamarinExePath)&quot; -o &quot;$(PackagesDestinationDir)&quot; -basePath &quot;$(PackageSrcDir)&quot;"
+            LogStandardErrorAsError="true" />
+
     <RegexTransform Items="@(NuspecTransform)" />
     <Exec Command="&quot;$(NuGetExePath)&quot; pack &quot;%(Nuspecs.Identity)&quot; -o &quot;$(PackagesDestinationDir)&quot; -basePath &quot;$(PackageSrcDir)&quot;"
             LogStandardErrorAsError="true" />
