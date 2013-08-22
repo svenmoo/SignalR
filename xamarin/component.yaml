@@ -1,0 +1,24 @@
+%YAML 1.2
+---
+libraries: 
+  ios: lib/ios/Microsoft.AspNet.SignalR.Client.dll
+  ios: lib/ios/Newtonsoft.Json.dll
+  ios: lib/ios/System.Net.Http.Extensions.dll
+  ios: lib/ios/System.Net.Http.Primitives.dll
+icons: 
+  - icons/Microsoft.AspNet.SignalR.Client_128x128.png
+  - icons/Microsoft.AspNet.SignalR.Client_512x512.png
+version: 2.0.0
+details: Details.md
+getting-started: GettingStarted.md
+samples: 
+  iOS Sample: ../Microsoft.AspNet.SignalR.Mono.Mobile.sln
+id: signalr
+summary: Real-time library
+publisher-url: asp.net/signalr
+license: License.md
+screenshots: 
+  - screenshots/screenshot1.png
+name: Microsoft.SignalR.Client
+publisher: Microsoft
+...
