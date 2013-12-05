@@ -118,6 +118,18 @@ namespace Microsoft.AspNet.SignalR.Client.Tests
             Assert.Equal(String.Empty, traceWithoutTimestamps());
         }
 
+        [Fact]
+        public void VerifyThatTransportConnectTimeoutResetsOnStop()
+        {
+            var connection = new Client.Connection("http://test");
+
+            connection.TransportConnectTimeout = TimeSpan.FromSeconds(5);
+
+            connection.Stop();
+
+            Assert.Equal(connection.TransportConnectTimeout, TimeSpan.Zero);
+        }
+
         public class Start
         {
             [Fact]

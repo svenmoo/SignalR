@@ -534,6 +534,7 @@ namespace Microsoft.AspNet.SignalR.Client
         /// </summary>
         public void Stop()
         {
+            TransportConnectTimeout = TimeSpan.Zero;
             Stop(DefaultAbortTimeout);
         }
 
